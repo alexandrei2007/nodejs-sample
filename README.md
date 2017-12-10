@@ -1,6 +1,6 @@
 # nodejs-sample
 
-NodeJs sample with express, mocha, chai
+NodeJs sample with express, mocha, chai, superagent
 
 ## Express installation
 
@@ -19,4 +19,10 @@ npm install mocha --save-dev
 
 ```
 npm install chai --save-dev
+```
+
+## Superdev (superagent) installation
+
+```
+npm install supertest --save-dev
 ```
