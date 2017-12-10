@@ -1,3 +1,5 @@
+'use strict';
+
 let Customer = require('../../src/model/customer');
 const expect = require('chai').expect;
 

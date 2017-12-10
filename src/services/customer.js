@@ -31,20 +31,20 @@ module.exports.get = () => {
 
 module.exports.getById = (id) => {
     return customers.find(c => c.id === parseInt(id, 10));
-}
+};
 
 module.exports.add = (customer) => {
     this.validateCustomer(customer, true);
 
     customers.push(customer);
-}
+};
 
 module.exports.update = (customer) => {
     this.validateCustomer(customer, false);
 
     let index = customers.indexOf(customer);
     customers[index] = customer;
-}
+};
 
 module.exports.removeById = (id) => {
 

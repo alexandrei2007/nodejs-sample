@@ -55,13 +55,13 @@ describe('Customers service', () => {
         let customer = new Customer(customer_id, 'Someone', 'Else');
         service.add(customer);
 
-        customer.firstname = "Firstname";
-        customer.lastname = "Lastname";
+        customer.firstname = 'Firstname';
+        customer.lastname = 'Lastname';
         service.update(customer);
 
         let existing = service.getById(customer_id);
-        expect(customer.firstname).equal("Firstname");
-        expect(customer.lastname).equal("Lastname");
+        expect(customer.firstname).equal('Firstname');
+        expect(customer.lastname).equal('Lastname');
         expect(existing.id).equal(customer_id);
 
     });
@@ -71,7 +71,7 @@ describe('Customers service', () => {
         expect(() => {
             service.add({
                 id: 2000, firstname: 'John', lastname: 'Smith'
-            })
+            });
         }).to.throw(/Invalid customer/);
 
     });
@@ -80,7 +80,7 @@ describe('Customers service', () => {
 
         let customer = new Customer(1000);
         expect(() => {
-            service.add(customer)
+            service.add(customer);
         }).to.throw(/Firstname is required/);
 
     });
@@ -89,7 +89,7 @@ describe('Customers service', () => {
 
         let customer = new Customer(1, 'John');
         expect(() => {
-            service.add(customer)
+            service.add(customer);
         }).to.throw(/Id already exists/);
 
     });
@@ -115,7 +115,7 @@ describe('Customers service', () => {
 
         let customer_id = 999;
         expect(() => {
-            service.removeById(customer_id)
+            service.removeById(customer_id);
         }).to.throw(/not found/);
 
 

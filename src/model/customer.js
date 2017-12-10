@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = class Customer {
 
     constructor (id, firstname, lastname) {
@@ -10,4 +12,4 @@ module.exports = class Customer {
         return this.firstname + ' ' + this.lastname;
     }
 
-}
+};
