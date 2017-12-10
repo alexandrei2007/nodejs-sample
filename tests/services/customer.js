@@ -49,6 +49,23 @@ describe('Customers service', () => {
 
     });
 
+    it('should update an user', () => {
+
+        let customer_id = 700;
+        let customer = new Customer(customer_id, 'Someone', 'Else');
+        service.add(customer);
+
+        customer.firstname = "Firstname";
+        customer.lastname = "Lastname";
+        service.update(customer);
+
+        let existing = service.getById(customer_id);
+        expect(customer.firstname).equal("Firstname");
+        expect(customer.lastname).equal("Lastname");
+        expect(existing.id).equal(customer_id);
+
+    });
+
     it('should throw an error by adding an invalid user instance', () => {
 
         expect(() => {

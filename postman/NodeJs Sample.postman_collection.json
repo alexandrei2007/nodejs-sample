@@ -1,0 +1,93 @@
+{
+	"variables": [],
+	"info": {
+		"name": "NodeJs Sample",
+		"_postman_id": "999b13bf-8b81-f59b-d749-caa7bdcf10d5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"request": {
+				"url": "localhost:3000/api/customers",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Customer  by id",
+			"request": {
+				"url": "localhost:3000/api/customers/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Save",
+			"request": {
+				"url": "localhost:3000/api/customers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"firstname\": \"Alexandre\",\n\t\"lastname\": \"Ito\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Update",
+			"request": {
+				"url": "localhost:3000/api/customers/3",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"firstname\": \"Alexandre\",\n\t\"lastname\": \"Ito\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Delete",
+			"request": {
+				"url": "localhost:3000/api/customers/3",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n\t\"firstname\": \"Alexandre\",\n\t\"lastname\": \"Ito\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
